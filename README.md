@@ -1,8 +1,4 @@
-# PD–HC Classification
-
-This project combines wrist IMU signals and non-motor symptom questionnaires to distinguish Parkinson's disease (PD) from healthy controls (HC). A CNN-based multiple-instance learning encoder learns kinematic representations through supervised contrastive learning. The pretrained encoder is then frozen, and a gated fusion classifier combines kinematic and phenotypic features.
-
-The pipeline uses all 11 tasks, both wrists, and subject-wise nested cross-validation with 5 outer folds and 4 inner folds. Questionnaire features contain 30 answers and their total score.
+# PD–CFNet: A Contrastive-enabled Fusion Network for Parkinson’s Disease Detection Using IMU and Phenotypic Data
 
 ## Installation
 
