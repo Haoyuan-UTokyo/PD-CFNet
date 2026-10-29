@@ -12,6 +12,8 @@ python -m pip install -r requirements.txt
 
 ## Data Preparation
 
+Download the [PADS dataset from PhysioNet](https://physionet.org/content/parkinsons-disease-smartwatch/1.0.0/).
+
 Place the PADS data under `PADS/PD/` and `PADS/HC/`. Each group includes `movement/observation_*.json`, the referenced `movement/timeseries/` files, and `questionnaire/questionnaire_response_*.json`.
 
 ```bash
@@ -50,4 +52,4 @@ To inspect inner validation scores without evaluating outer test folds:
 python train.py --config config.yaml --inner-only
 ```
 
-Use a separate `output.results_dir` for each run. Model checkpoints, predictions, and metrics are saved there; evaluation produces ROC, confusion matrix, training curves, and bootstrap confidence intervals.
+Use a separate `output.results_dir` for each run. Training saves model checkpoints, predictions, and metrics there. Evaluation saves only `evaluation_summary.json`, containing per-fold and pooled metrics, fold means/standard deviations, and 95% bootstrap confidence intervals.
